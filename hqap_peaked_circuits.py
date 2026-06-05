@@ -9,8 +9,9 @@ Quantinuum H2 (56 qubits, ~2000 two-qubit gates).
 
 ----------------------------------
 Remarks:
-I used qiskit (statevector), so it's very slow (this demo is just for my learning purpose)
-Don't try it on more than 6 qubits, or overall depth beyond 30 gates
+I used qiskit (statevector)
+Don't try it on more than 6 qubits, or overall depth beyond 30 gates (the optimizier is too slow)
+Currently working on locally perturbing U^dagger in various ways and testing against the marginal attack
 ----------------------------------
 
 Section 3 of the paper
@@ -291,7 +292,6 @@ def simulate_quantum_device(
             for i in top5
         ],
     }
-
 
 # ════════════════════════════════════════════════════════════════════════════
 # CLASSICAL ATTACK — marginal attack (Section 4.1)
